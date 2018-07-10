@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "Your App Name",
+    "icon": "./assets/icon.png",
+    "version": "1.0.0",
+    "slug": "jack-sparrow",
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "com.thekeytalent.jacksparrow"
+    },
+    "android": {
+      "package": "com.thekeytalent.jacksparrow"
+    }
   }
 }

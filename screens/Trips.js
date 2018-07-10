@@ -1,8 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Dimensions } from 'react-native';
-import Video from 'react-native-video'
-import YouTube from "react-native-youtube";
+import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Dimensions, WebView } from 'react-native';
+
+
+const videoIntro = require('../assets/video/tkt.mp4');
+
 const { height, width } = Dimensions.get("window");
+
 
 class Trips extends React.Component {
   render() {
@@ -12,7 +15,7 @@ class Trips extends React.Component {
 
           <ScrollView scrollEventThrottle={16}>
             <View style={{ flex: 1, paddingTop: 20 }}>
-              <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
+              <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <Text style={{ fontSize: 24, fontWeight: "700", color: "white" }}>
                   Bienvenido!
                 </Text>
@@ -28,21 +31,15 @@ class Trips extends React.Component {
               <Text style={{ marginTop: 10, fontWeight: "100", color: "white" }}>
                Gracias por estar con The Key Talent. Esperamos que todos podamos disfrutar con los retos que nos esperan y con el éxito que, seguro, vamos a conseguir.
                 </Text>
-                <View style={{ width: width - 40, height: 200, marginTop: 20 }}>
-                <Image style={{ flex: 1, width: null, height: null, resizeMode: "cover", borderRadius: 5, borderWidth: 1, borderColor: "#dddddd" }} source={require("../assets/mp.png")} />
+              <View style={{ width: width - 40, height: 200, marginTop: 20,marginBottom:40 }}>
+                <WebView
+                  style={{ flex: 1, backgroundColor:'#000' }}
+                  javaScriptEnabled={true}
+                  source={{ uri: 'https://player.vimeo.com/video/258286266' }}
+                />
                 </View>
               </View>
-              <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                <Text style={{ fontSize: 24, fontWeight: "700", color: "white" }}>
-                  Digital Skills Awards
-                </Text>
-                <Text style={{ marginTop: 10, fontWeight: "100", color: "white" }}>
-                  ¡Ya estamos en la entrega de los premios Digital Skills Awards de @AMETIC_es!
-                </Text>
-                <View style={{ width: width - 40, height: 200, marginTop: 20 }}>
-                  <Image style={{ flex: 1, width: null, height: null, resizeMode: "cover", borderRadius: 5, borderWidth: 1, borderColor: "#dddddd" }} source={require("../assets/mp.png")} />
-                </View>
-              </View>
+              
             </View>
           </ScrollView>
         </View>

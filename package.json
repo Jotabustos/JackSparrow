@@ -19,10 +19,13 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/videoplayer": "^0.4.0",
     "expo": "^27.0.1",
+    "ramda": "^0.25.0",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-star-rating": "^1.0.9",
-    "react-navigation": "^2.5.5"
+    "react-navigation": "^2.5.5",
+    "recompose": "^0.26.0"
   }
 }

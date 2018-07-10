@@ -12,8 +12,21 @@ import Profile from './screens/Profile';
 
 
 
+
 export default createBottomTabNavigator(
   {
+    Trips: {
+      screen: Trips,
+      navigationOptions: {
+        tabBarLabel: "",
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require("./assets/logosm.png")}
+            style={{ width: 24, height: 24, tintColor: "#0072ce" }}
+          />
+        )
+      }
+    },
     Explore: {
       screen: Explore,
       navigationOptions: {
@@ -32,18 +45,7 @@ export default createBottomTabNavigator(
         )
       }
     },
-    Trips: {
-      screen: Trips,
-      navigationOptions: {
-        tabBarLabel: "",
-        tabBarIcon: ({ tintColor }) => (
-          <Image
-            source={require("./assets/logosm.png")}
-            style={{ width: 24, height: 24, tintColor: "#0072ce" }}
-          />
-        )
-      }
-    },
+   
     Saved: {
       screen: Saved,
       navigationOptions: {
