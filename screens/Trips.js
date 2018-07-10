@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Dimensions, WebView } from 'react-native';
 
 
-const videoIntro = require('../assets/video/tkt.mp4');
-
 const { height, width } = Dimensions.get("window");
 
 
